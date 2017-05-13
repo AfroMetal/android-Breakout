@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#d32f2f</color>
+    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorAccent">#f9a825</color>
+
+    <color name="colorText">#e0e0e0</color>
+    <color name="colorBackground">#212121</color>
+
+    <color name="brickRed">#d32f2f</color>
+    <color name="brickGreen">#64dd17</color>
+    <color name="brickBlue">#1976d2</color>
+    <color name="brickYellow">#fbc02d</color>
+    <color name="brickBlueHit">#64b6f9</color>
+
+    <color name="colorBall">#eeff41</color>
+    <color name="colorPaddle">#a1887f</color>
+
+    <array name="brickColors">
+        <item>@color/brickRed</item>
+        <item>@color/brickGreen</item>
+        <item>@color/brickYellow</item>
+        <item>@color/brickBlue</item>
+        <item>@color/brickRed</item>
+    </array>
+</resources>

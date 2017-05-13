@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.afrometal.radoslaw.breakout.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="30dp"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/start_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_info"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textSize="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/colorAccent"
+        android:scrollbars="vertical"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_margin = "16dp" >
+
+        <TextView
+            android:id="@+id/controls_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/controls"
+            android:textSize="16dp"
+            android:textColor="@color/colorText"
+            android:layout_weight="1"
+            android:scrollbars="vertical"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:scrollbars="vertical"
+            android:gravity="center_vertical">
+
+            <Switch
+                android:id="@+id/tilt_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorText"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dp"
+                android:text="@string/tilt_control" />
+
+            <TextView
+                android:id="@+id/rowsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tilt_switch"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/rows"
+                android:textColor="@color/colorText"/>
+
+            <SeekBar
+                android:id="@+id/rows_picker"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rowsText"
+                android:max="8"
+                android:progress="1"/>
+
+            <TextView
+                android:id="@+id/columnsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/rows_picker"
+                android:textSize="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/columns"
+                android:textColor="@color/colorText"/>
+
+            <SeekBar
+                android:id="@+id/columns_picker"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/columnsText"
+                android:max="11"
+                android:progress="1"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bricks_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bricks"
+            android:textSize="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorText"
+            android:layout_weight="1"
+            android:scrollbars="vertical"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/b_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/start"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:onClick="startGame" />
+
+</LinearLayout>
